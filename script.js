@@ -16,8 +16,6 @@ function buscaEndereco(){
         let main = document.getElementById('main');
         main.style.justifyContent = 'center';
     
-    
-    
         let url = `https://viacep.com.br/ws/${cep}/json/`
     
         let ajax = new  XMLHttpRequest();
@@ -47,7 +45,7 @@ function buscaEndereco(){
                 loading.style.display = 'none';
                 box_dados.style.display = 'block';
             } else {
-                alert("Erro ao buscar endereço " + ajax.status);
+                alert("Falha ao buscar endereço - ERRO: " + ajax.status);
                 location.reload();
             }
         }        
